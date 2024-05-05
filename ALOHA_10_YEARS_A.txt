@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  ios_base :: sync_with_stdio(false);
+  cin.tie(NULL);
+  cout.tie(NULL);
+  
+  int num_people, need_to_Fe, half;
+  int wanna_vote[200001];
+  int num_wanna_Fe = 0;
+
+  cin >> num_people;
+
+  if((num_people % 2) != 0){
+    half = (num_people + 1) / 2;
+  }
+  else half = num_people/2;
+  
+  for(int i = 0; i < num_people; i++){
+    cin >> wanna_vote[i];
+  
+    if(wanna_vote[i] == 1) num_wanna_Fe++;
+  }
+  
+  need_to_Fe = half - num_wanna_Fe;
+  
+  if(num_wanna_Fe >= half){
+    cout << '0';
+  }
+  else{
+    cout << need_to_Fe;
+  }
+
+  
+}

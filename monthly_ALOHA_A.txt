@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int arr_mel[17] = {0,0,1,2,0,1,3,0,1,4,0,1,3,0,1,2,2};
+int main(void) {
+  int leng;
+  int mel_num;
+  
+  scanf("%d", &leng);
+  
+  for(int i = 0; i < leng; ++i){
+    scanf("%d", &mel_num);
+    int mel_loc = mel_num % 16;
+    printf("%d\n", arr_mel[mel_loc]); 
+  }
+
+  return 0;
+}
